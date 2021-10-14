@@ -3,6 +3,7 @@
 ```
 show dbs
 use admin
+// root user
 db.createUser({
   user: "root", 
   pwd: passwordPrompt(), 
@@ -11,6 +12,22 @@ db.createUser({
     "readWriteAnyDatabase"
   ]
 })
+
+// specific user
+db.createUser(
+  {
+    user: "myUser",
+    pwd:  passwordPrompt(),   // or cleartext password
+    roles: [ 
+      { role: "readWrite", db: "test" },
+      { role: "read", db: "reporting" } 
+    ]
+  }
+)
+
+// get user
+db.getUsers();
+
 exit
 ```
 3. Enabling Authentication
@@ -47,4 +64,11 @@ mongo -u <username> -p --authenticationDatabase admin
   admin  0.000GB
   config 0.000GB
   local  0.000GB           
+```
+
+- Connect to a specific database
+```
+mongo "mongodb://myUser:test@localhost:27017/test"
+> db.todos.insert({title: "do something", isDone: false})
+> db.todos.find()
 ```
