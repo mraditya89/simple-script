@@ -72,3 +72,5 @@ mongo "mongodb://myUser:test@localhost:27017/test"
 > db.todos.insert({title: "do something", isDone: false})
 > db.todos.find()
 ```
+5. Allow mongo Port if firewall active
+- sudo ufw allow <port>/tcp
