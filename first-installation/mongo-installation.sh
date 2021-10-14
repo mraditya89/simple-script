@@ -15,10 +15,3 @@ else
   echo "[script] : Mongodb already installed, skip installation"
 fi
 
-
-#mongo
-#> show dbs
-#> use admin
-#> db.createUser({user: "root", pwd: passwordPrompt(), roles: [role: "userAdminAnyDatabase", db:"admin", "readWriteAnyDatabase"]})
-#> exit
-

@@ -16,7 +16,3 @@ else
   echo "[script] : Nginx already installed, skip installation"
 fi
 
-
-
-# ufw allow <port>/tcp
-# ufw deny <port>/tcp

@@ -11,3 +11,5 @@ echo "[script] : Running the installation script"
 bash ./node-installation.sh
 bash ./nginx-installation.sh
 bash ./mongo-installation.sh
+bash ./redis-installation.sh
+bash ./docker-installation.sh
