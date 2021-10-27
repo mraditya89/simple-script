@@ -74,3 +74,11 @@ mongo "mongodb://myUser:test@localhost:27017/test"
 ```
 5. Allow mongo Port if firewall active
 - sudo ufw allow <port>/tcp
+  
+6. Backup and Restore Database
+```
+# Backup database
+mongodump -u <user> -p <password> -d <dbName> --authenticationDatabase admin
+# Restore database
+mongorestore <path_dump_directory> -u <user> -p <password> -d <dbName> --authenticationDatabase admin
+```
