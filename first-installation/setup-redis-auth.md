@@ -22,8 +22,11 @@ requirepass <password>
 redis-cli
 > ping 
 ```
-- With auth : redis-cli -a <password>
+- With auth : 
+```
+redis-cli -a <password>
 > ping 
   Output : PONG
 > get mykey
   Output : hey it works
+```
