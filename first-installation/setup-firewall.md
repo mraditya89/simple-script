@@ -1,6 +1,7 @@
 1. Firewall status : 
 - `sudo ufw status`
-- `sudo ufw status numbered`
+- To see added rule before enabling : `sudo ufw show added` 
+- To see added rule after enabling : `sudo ufw status numbered`
 2. Open service / port : 
 - `sudo ufw allow ssh`
 - `sudo ufw allow <port>/tcp` 
